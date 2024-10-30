@@ -1,4 +1,4 @@
-# Your Name Here
+# Samuel Clackler
 # UWYO COSC 1010
 # Submission Date
 # Lab XX
@@ -9,17 +9,41 @@
 # here
 
 
-# Prompt the user for an upper bound 
+#Prompt the user for an upper bound
+"""
+while True:
+    Digit = input("Please enter a Digit, type exit to stop: ")
+    if Digit == "exit":
+        break
+    if Digit.isdigit():
+       break
+"""
+
+ 
 # Write a while loop that gives the factorial of that upper bound
+factorial = 1
+
+while True:
+    Digit = input("Please enter a digit, type exit to stop: ")
+    if Digit == "exit":
+        break
+    if Digit.isdigit():
+        variable = int(Digit)
+        # variable = 6
+        while variable > 0:
+            factorial = factorial * variable
+            variable -= 1
+        break
+    if Digit != Digit.isdigit:
+        print("Please enter a valid integer")
+
+print(f"The factorial of the given value is: {factorial}")
+
 # This will need to be a positive number
 # For this you will need to check to ensure that the user entered a number
     # To do so you can use the methods `.isdigit()` or `.isnumeric()`
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
-
-factorial = 1
-
-print(f"The result of the factorial based on the given bound is {factorial}")
 
 print("*"*75)
 # Create a while loop that prompts a user for input of an integer values
@@ -38,6 +62,14 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
+
+while True:
+    num = input("Please enter a value: ")
+    if num.isdigit():
+        num_sum += int(num)
+    elif num[0] = "-"
+
+
 
 print(f"Your final sum is {num_sum}")
 
@@ -58,5 +90,3 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
-
-        
