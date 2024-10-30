@@ -19,7 +19,7 @@ while True:
        break
 """
 
- 
+'''
 # Write a while loop that gives the factorial of that upper bound
 factorial = 1
 
@@ -46,6 +46,7 @@ print(f"The factorial of the given value is: {factorial}")
 # You will continue to prompt the user until a proper integer value is entered
 
 print("*"*75)
+'''
 # Create a while loop that prompts a user for input of an integer values
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
 # Upon ending the loop print the sum
@@ -60,20 +61,26 @@ print("*"*75)
     # I recommend checking out: https://www.w3schools.com/python/ref_string_replace.asp to figure out how one may remove a character from a string
 # All this together means you will have an intensive while loop that includes multiple if statements, likely with some nesting 
 # The sum should start at 0 
-
+'''
 num_sum = 0 
 
 while True:
     num = input("Please enter a value: ")
     if num.isdigit():
         num_sum += int(num)
-    elif num[0] = "-"
+    elif num[0] == "-" and num[1:].isdigit():
+        num_sum -= int(num)
+    elif num == 'exit':
+        break
+    else:
+        print('please enter a valid value or type exit: ')
 
 
 
 print(f"Your final sum is {num_sum}")
 
 print("*"*75)
+'''
 # Now you will be creating a two operand calculator
 # It will support the following operators: +,-,/,*,% 
 # So accepted input is of the form `operand operator operand` 
@@ -90,3 +97,27 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
+
+while True:
+    spice = input('Please +-*/% two values of your choosing: ')
+    break
+    operands = ['+','-','*','/','%']
+    for operand in operands:
+        if (operand in spice):
+            numbers = spice.split(operand)
+            numbers[0] = 'first'
+            numbers[1] = 'second'
+            final_output = 0
+            match operand:
+                case '+':
+                    final_output = numbers[0] + numbers[1]
+                case '-':
+                    final_output = numbers[0] - numbers[1]
+                case '*':
+                    final_output = numbers[0] * numbers[1]
+                case '/':
+                    final_output = numbers[0] / numbers[1]
+                case '%':
+                    final_output = numbers[0] % numbers[1]
+
+print(f'The solution to the entered problem is {final_output}')
