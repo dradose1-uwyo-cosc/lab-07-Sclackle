@@ -1,8 +1,8 @@
 # Samuel Clackler
 # UWYO COSC 1010
 # Submission Date
-# Lab XX
-# Lab Section: 
+# Lab 07
+# Lab Section: 11
 # Sources, people worked with, help given to: 
 # your
 # comments
